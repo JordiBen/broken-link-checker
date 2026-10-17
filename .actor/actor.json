@@ -1,0 +1,72 @@
+{
+  "actorSpecification": 1,
+  "name": "broken-link-checker",
+  "title": "Broken Link Checker: 404s, Broken Images & Redirects",
+  "description": "Crawl your website and find every broken link, missing image, dead script or stylesheet and bad external link, with the pages they appear on. Respects robots.txt. Priced per page, not per link.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "readme": "../README.md",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "views": {
+        "overview": {
+          "title": "Broken & blocked links",
+          "transformation": {
+            "fields": [
+              "verdict",
+              "status",
+              "url",
+              "resourceType",
+              "internal",
+              "foundOn",
+              "anchorTexts",
+              "error",
+              "site"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "properties": {
+              "verdict": {
+                "label": "Verdict"
+              },
+              "status": {
+                "label": "HTTP",
+                "format": "number"
+              },
+              "url": {
+                "label": "Link",
+                "format": "link"
+              },
+              "resourceType": {
+                "label": "Type"
+              },
+              "internal": {
+                "label": "Internal",
+                "format": "boolean"
+              },
+              "foundOn": {
+                "label": "Found on",
+                "format": "array"
+              },
+              "anchorTexts": {
+                "label": "Anchor text",
+                "format": "array"
+              },
+              "error": {
+                "label": "Error"
+              },
+              "site": {
+                "label": "Site",
+                "format": "link"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

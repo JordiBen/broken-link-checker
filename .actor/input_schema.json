@@ -1,0 +1,78 @@
+{
+  "title": "Broken Link Checker input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "startUrls": {
+      "title": "Website URLs",
+      "type": "array",
+      "description": "Homepage (or any page) of each site to check. The crawler stays on the same domain.",
+      "editor": "requestListSources",
+      "prefill": [
+        {
+          "url": "https://crawlee.dev"
+        }
+      ]
+    },
+    "maxPagesPerSite": {
+      "title": "Max pages per site",
+      "type": "integer",
+      "description": "Stop after this many HTML pages per site. You are charged per page crawled.",
+      "default": 200,
+      "minimum": 1,
+      "maximum": 20000
+    },
+    "checkExternalLinks": {
+      "title": "Check external links",
+      "type": "boolean",
+      "description": "Also verify links pointing to other websites (each URL is checked once).",
+      "default": true
+    },
+    "checkResources": {
+      "title": "Check images, scripts & stylesheets",
+      "type": "boolean",
+      "description": "Verify <img>, <script>, <link rel=stylesheet/icon>, <iframe> and media sources, not only <a> links.",
+      "default": true
+    },
+    "includeWorkingLinks": {
+      "title": "Include working links in output",
+      "type": "boolean",
+      "description": "Off = only broken and blocked links (smaller dataset). On = every checked URL.",
+      "default": false
+    },
+    "includeSubdomains": {
+      "title": "Treat subdomains as internal",
+      "type": "boolean",
+      "description": "Crawl blog.example.com when starting from example.com.",
+      "default": false,
+      "sectionCaption": "Advanced"
+    },
+    "maxDepth": {
+      "title": "Max crawl depth",
+      "type": "integer",
+      "description": "Clicks away from the start URL.",
+      "default": 10,
+      "minimum": 0,
+      "maximum": 50
+    },
+    "maxConcurrency": {
+      "title": "Max concurrency",
+      "type": "integer",
+      "description": "Parallel page fetches. Keep low to be gentle on the site.",
+      "default": 5,
+      "minimum": 1,
+      "maximum": 20
+    },
+    "timeoutSecs": {
+      "title": "Timeout per request (seconds)",
+      "type": "integer",
+      "default": 15,
+      "minimum": 3,
+      "maximum": 60,
+      "description": "How long to wait for each HTTP request before treating the link as timed out."
+    }
+  },
+  "required": [
+    "startUrls"
+  ]
+}
