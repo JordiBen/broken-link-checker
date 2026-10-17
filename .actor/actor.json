@@ -1,8 +1,8 @@
 {
   "actorSpecification": 1,
   "name": "broken-link-checker",
-  "title": "Broken Link Checker: 404s, Broken Images & Redirects",
-  "description": "Crawl your website and find every broken link, missing image, dead script or stylesheet and bad external link, with the pages they appear on. Respects robots.txt. Priced per page, not per link.",
+  "title": "Broken Link Checker & SEO Crawler: 404s, Images, Redirects",
+  "description": "Crawl a website and find every broken link (404s), dead external link, missing image, script or stylesheet, with the pages they appear on and the anchor text. Respects robots.txt. Priced per page crawled, not per link: $2 per 1,000 pages.",
   "version": "1.0",
   "buildTag": "latest",
   "input": "./input_schema.json",
