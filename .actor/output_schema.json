@@ -1,0 +1,18 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Broken link checker output",
+  "properties": {
+    "results": {
+      "type": "string",
+      "template": "{{links.apiDefaultDatasetUrl}}/items",
+      "title": "Broken & blocked links",
+      "description": "One item per broken, blocked or failing link/resource, with HTTP status and the pages it appears on."
+    },
+    "summary": {
+      "type": "string",
+      "title": "Crawl summary",
+      "description": "Per-site crawl summary (pages crawled, links checked, broken count).",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/SUMMARY"
+    }
+  }
+}
