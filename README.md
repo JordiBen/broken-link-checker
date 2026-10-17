@@ -4,7 +4,6 @@
 
 > **Run it in the cloud with no setup:** [Broken Link Checker: 404s, Broken Images & Redirects on the Apify Store](https://apify.com/manageable_gully/broken-link-checker).  
 > Pay only per result, export to JSON/CSV/Excel, schedule runs and call it from the API.
-<!-- Note: the Apify Store page goes live once the Actor is published. -->
 <!-- AFFILIATE_LINK_PLACEHOLDER: replace the Apify links above with the affiliate link when available -->
 
 Crawls your website and lists every **broken link, missing image, dead script or stylesheet and dead external link**, each with **the pages it appears on** and its anchor text, so you know exactly what to fix.
